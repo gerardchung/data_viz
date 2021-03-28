@@ -94,7 +94,8 @@ library(ggrepel)
 q + geom_line(aes(color = Variables, alpha = 1), size =2) +
     geom_point(aes(color = Variables,  alpha = 1) , size = 4) + 
   labs(title = "",
-       subtitle = "Change in % of households: <span style = 'color: #4e79a7;'>**Couple-based (children)**</span>, <span style = 'color: #76b7b2;'>**Lone Parent**</span>, <span style = 'color: #e15759;'>**Living alone**</span>, or <span style = 'color: #f28e2b;'>**Couple-based (no children)**</span>.") +
+       subtitle = "Change in % of households: <span style = 'color: #4e79a7;'>**Couple-based (children)**</span>, <span style = 'color: #76b7b2;'>**Lone Parent**</span>, <span style = 'color: #e15759;'>**Living alone**</span>, <br>or <span style = 'color: #f28e2b;'>**Couple-based (no children)**</span>.",
+       caption = "www.gerardchung.com | Codes: https://github.com/gerardchung/ | Source: Department of Statistics SG") +
 
     # Move x axis to top
     scale_x_discrete(position = "top") + 
@@ -113,7 +114,8 @@ q + geom_line(aes(color = Variables, alpha = 1), size =2) +
     theme(axis.text.x.top      = element_text(size=12)) +
     # Remove x & y tick marks
     theme(axis.ticks = element_blank()) +
-    theme(plot.subtitle = element_markdown()) +
+    theme(plot.subtitle = element_markdown()) + 
+    theme(plot.caption=element_text(hjust = 1)) +
 
     geom_text_repel(data = pct1 %>% filter(year == 1990), 
                     aes(label = paste0( pct_hsehold,"%")),
@@ -121,7 +123,7 @@ q + geom_line(aes(color = Variables, alpha = 1), size =2) +
                     fontface = "bold",
                     family = "Roboto Condensed",
                     size = 3.5,
-                    nudge_x = -.05,
+                    nudge_x = -.1, nudge_y = .1,
                     direction = "y") + 
   geom_text_repel(data = pct1 %>% filter(year == 2000), 
                   aes(label = paste0(pct_hsehold,"%")),
@@ -147,7 +149,7 @@ q + geom_line(aes(color = Variables, alpha = 1), size =2) +
                     fontface = "bold",
                     family = "Roboto Condensed",
                     size = 3.5,
-                    nudge_x = 2,
+                    nudge_x = -.04, nudge_y = .7,
                     direction = "y")  +
     scale_color_manual(values=c(blue, orange,red, ltblue)) -> final_1
 
@@ -167,9 +169,8 @@ waf <-
 
 w <- ggplot(data =waf, aes(fill = Variables, values = num_hsehold))
 
-w + geom_waffle(n_rows = 10, size = .10, color = "white", flip =T,
+w + geom_waffle(n_rows = 10, size = .20, color = "white", flip =T,
                 make_proportional = T) +
-  #  expand_limits(x=c(0,0), y=c(0,0)) + 
     coord_equal() + 
 
     labs(fill = NULL, colour = NULL) +
@@ -178,14 +179,10 @@ w + geom_waffle(n_rows = 10, size = .10, color = "white", flip =T,
     ggthemes::scale_fill_tableau(name=NULL) +
     labs(title = "",
     subtitle =  "In 2019, 47% of total households were <span style = 'color: #4e79a7;'>**households with children**</span><br>",
-   # caption = "www.gerardchung.com | Codes: https://github.com/gerardchung/ | Source: Department of Statistics SG",
     x = "Year",
     y = "%") + 
-   # theme(plot.subtitle = element_markdown()) + 
     guides(fill = guide_legend(reverse = TRUE)) +
   theme_minimal(base_family = "Roboto Condensed") +
-#  theme(panel.grid = element_blank(), axis.ticks.y = element_line()) +
-#  theme(legend.position = "none") + 
   theme(plot.subtitle = element_markdown(hjust = .2)) +
   theme(axis.title.y = element_blank()) + 
   theme(axis.text.y = element_blank()) + 
@@ -194,9 +191,8 @@ w + geom_waffle(n_rows = 10, size = .10, color = "white", flip =T,
   theme(axis.title.x = element_blank()) + 
   theme(axis.text.x = element_blank()) + 
   theme(panel.grid.major.x = element_blank()) +
-  theme(panel.grid.minor.x = element_blank()) -> final_2
-  theme(plot.caption = element_text(hjust = -3, size = 8)) -> final_2
-
+  theme(panel.grid.minor.x = element_blank()) -> final_2 
+ 
 
 
 # Combine graphs
@@ -206,55 +202,46 @@ w + geom_waffle(n_rows = 10, size = .10, color = "white", flip =T,
 # title: https://wilkelab.org/cowplot/articles/plot_grid.html 
 title <- ggdraw() + 
   draw_label(
-    "Trends in household types from 1990-2019",
+    "Trends in household types in Singapore from 1990-2019",
     fontface = 'bold',
     fontfamily = "Roboto Condensed",
-    size = 14,
+    size = 18,
     x = 0,
     hjust = 0,
   ) +
   theme(
     # add margin on the left of the drawing canvas,
     # so title is aligned with left edge of first plot
-    plot.margin = margin(0, 0, 0, 30)
+    plot.margin = margin(0, 0, 0, 2)
   )
 
 subtitle <- ggdraw() + 
   draw_label(
-    "Households with children is on a decreasing trend but remains the majority. Policies and social services\nneed to plan for increasing needs of households with no children and those living alone\n",
+    "Households with children are the majority but is on a decreasing trend. Number of households with no children and those living alone are on the rise.\nPolicies and services should also focus on these rising needs." ,
     #  fontface = 'bold',
     fontfamily = "Roboto Condensed",
-    size = 10,
+    size = 14,
     x = 0,
     hjust = 0
   ) +
   theme(
     # add margin on the left of the drawing canvas,
     # so title is aligned with left edge of first plot
-    plot.margin = margin(0, 0, 0, 30)
+    plot.margin = margin(0, 0, 0, 2)
   )
+  
 
-# https://wilkelab.org/cowplot/articles/aligning_plots.html
+# Arrange graphs
 
-plot_column <- plot_grid(final_1, final_2, ncol = 1, hjust = -3)
+plot_column <- plot_grid(final_1, final_2, nrow = 1, align = c("h","t"),hjust = 0 )
+
 plot_grid(title, subtitle,
           plot_column, 
-          ncol = 1,
-          axis = c("l", "b"),
-          rel_heights = c(.01, .001, .1)) # c(0.1, .05, 1))
+          ncol = 1, rel_heights = c(0.1, .05, 1)) -> final
 
-library(gridExtra)
-# https://cran.r-project.org/web/packages/egg/vignettes/Ecosystem.html
-grid.arrange(final_1, final_2,
-             nrow = 1, 
-             widths = c(2,1.5),
-             bottom = grid::textGrob(
-               "www.gerardchung.com | Codes: https://github.com/gerardchung/ | Source: Department of Statistics SG",
-               gp = grid::gpar(fontface = 3, fontsize = 9, fontfamily = "Roboto Condensed"),
-               hjust = 1.05,
-               x = 1,
-               y = 2)
-             )
+
+ggsave( plot = final, scale = 1, "dos/hse_hld_child/dos_hsehld_child.png",width=12, height=10)
+
 
 
 
