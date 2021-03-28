@@ -113,7 +113,7 @@ q + geom_line(aes(color = Variables, alpha = 1), size =2) +
     theme(axis.text.x.top      = element_text(size=12)) +
     # Remove x & y tick marks
     theme(axis.ticks = element_blank()) +
-    theme(plot.subtitle = element_markdown(hjust = 2)) +
+    theme(plot.subtitle = element_markdown()) +
 
     geom_text_repel(data = pct1 %>% filter(year == 1990), 
                     aes(label = paste0( pct_hsehold,"%")),
@@ -178,7 +178,7 @@ w + geom_waffle(n_rows = 10, size = .10, color = "white", flip =T,
     ggthemes::scale_fill_tableau(name=NULL) +
     labs(title = "",
     subtitle =  "In 2019, 47% of total households were <span style = 'color: #4e79a7;'>**households with children**</span><br>",
-    caption = "www.gerardchung.com | Codes: https://github.com/gerardchung/ | Source: Department of Statistics SG",
+   # caption = "www.gerardchung.com | Codes: https://github.com/gerardchung/ | Source: Department of Statistics SG",
     x = "Year",
     y = "%") + 
    # theme(plot.subtitle = element_markdown()) + 
@@ -194,7 +194,7 @@ w + geom_waffle(n_rows = 10, size = .10, color = "white", flip =T,
   theme(axis.title.x = element_blank()) + 
   theme(axis.text.x = element_blank()) + 
   theme(panel.grid.major.x = element_blank()) +
-  theme(panel.grid.minor.x = element_blank()) +
+  theme(panel.grid.minor.x = element_blank()) -> final_2
   theme(plot.caption = element_text(hjust = -3, size = 8)) -> final_2
 
 
@@ -234,6 +234,7 @@ subtitle <- ggdraw() +
     plot.margin = margin(0, 0, 0, 30)
   )
 
+# https://wilkelab.org/cowplot/articles/aligning_plots.html
 
 plot_column <- plot_grid(final_1, final_2, ncol = 1, hjust = -3)
 plot_grid(title, subtitle,
@@ -242,7 +243,18 @@ plot_grid(title, subtitle,
           axis = c("l", "b"),
           rel_heights = c(.01, .001, .1)) # c(0.1, .05, 1))
 
-  
-  # https://wilkelab.org/cowplot/articles/aligning_plots.html
+library(gridExtra)
+# https://cran.r-project.org/web/packages/egg/vignettes/Ecosystem.html
+grid.arrange(final_1, final_2,
+             nrow = 1, 
+             widths = c(2,1.5),
+             bottom = grid::textGrob(
+               "www.gerardchung.com | Codes: https://github.com/gerardchung/ | Source: Department of Statistics SG",
+               gp = grid::gpar(fontface = 3, fontsize = 9, fontfamily = "Roboto Condensed"),
+               hjust = 1.05,
+               x = 1,
+               y = 2)
+             )
+
 
 
