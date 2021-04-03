@@ -79,7 +79,7 @@ plot1 +
         strip.text = element_markdown(size = 12, face = "bold"),
         strip.background = element_blank(),
         axis.line.x = element_line(size = 0.5, colour = "gray20"),
-        axis.text.x = element_text(size = 10, color = "gray20"),
+        axis.text.x = element_text(size = 9, color = "gray20"),
         axis.line.y = element_blank(),
         axis.ticks.y = element_blank(),
         axis.text.y = element_text(size = 12, color = "gray20") 
@@ -114,7 +114,7 @@ plot2 +
         strip.text = element_markdown(size = 12, face = "bold"),
         strip.background = element_blank(),
         axis.line.x = element_line(size = 0.5, colour = "gray20"),
-        axis.text.x = element_text(size = 11, color = "gray20"),
+        axis.text.x = element_text(size = 9, color = "gray20"),
         axis.line.y = element_blank(),
         axis.ticks.y = element_blank(),
         axis.text.y = element_text(size = 12, color = "gray20") 
