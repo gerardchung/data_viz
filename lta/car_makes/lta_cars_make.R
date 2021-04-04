@@ -1,8 +1,7 @@
 # Data viz  
 # Data from LTA Singapore #####
     # Description: The original dataset was on the annual motor vehicle 
-    # population in Singapore (year 2005-2020). The dataset you are loading 
-    # is reduced to only year 2020. 
+    # population in Singapore (year 2005-2020). 
     # Source: https://datamall.lta.gov.sg/ under “Annual Motor Vehicle 
     # Population by Vehicle Type”
 
