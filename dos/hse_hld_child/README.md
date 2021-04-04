@@ -2,4 +2,4 @@
 
 ## Data from Department of Statistics Singapore  
 
-![Trends of hoouseholds with children or without](dos_hsehld_child.png)
+![Trends of household types with children or without](dos_hsehld_child.png)
