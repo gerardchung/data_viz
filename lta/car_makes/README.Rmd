@@ -4,4 +4,4 @@
 
 
 
-![Number of car population in Singapore from 2005-2020](/lta/car_makes/LTA_car_make.png)
+![Number of car population in Singapore from 2005-2020](LTA_car_make.png)
