@@ -81,7 +81,7 @@ p +
                              fontface = "plain",
                              family = "Roboto Condensed",
                              size = 3,
-                             nudge_x = -0.2,
+                             nudge_x = -.9,
                              direction = "y")
 
 ggsave(last_plot(),
