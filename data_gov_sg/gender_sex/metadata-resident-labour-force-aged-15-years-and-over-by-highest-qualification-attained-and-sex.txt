@@ -1,0 +1,87 @@
+# Metadata for Resident Labour Force Aged 15 Years and Over by Highest Qualification Attained and Sex
+---
+Identifier: '7ad210d2-25e7-4b2d-9dee-d449d8790352'
+Name: 'resident-labour-force-aged-15-years-and-over-by-highest-qualification-attained-and-sex'
+Title: 'Resident Labour Force Aged 15 Years and Over by Highest Qualification Attained
+  and Sex'
+Description:
+  - '* Data are for mid-year.'
+  - '* Residents refer to Singapore Citizens and Permanent Residents.'
+  - '* Resident labour force refers to residents aged 15 & over who were either employed
+    or unemployed during the reference period.'
+  - '* Data for 1995, 2000 and 2005 are not available as the Comprehensive Labour
+    Force Survey was not conducted in these years due to the conduct of the Population
+    Census 2000, General Household Surveys 1995 and 2005 by Department of Statistics,
+    Ministry of Trade and Industry.'
+  - ''
+  - 'Source: Comprehensive Labour Force Survey, Manpower Research And Statistics Department,
+    MOM'
+Topics:
+  - 'Economy'
+Keywords:
+  - 'highest qualification attained'
+  - 'jobs'
+  - 'labour force'
+  - 'resident'
+  - 'sex'
+Publisher:
+  Name: 'Ministry of Manpower'
+  Admin 1:
+    Name: 'Shanice Teo'
+    Department: 'Manpower Research & Statistics Department, MOM'
+    Email: 'shanice_teo@mom.gov.sg'
+  Admin 2:
+    Name: 'Ng Mun Yi'
+    Department: 'Manpower Research & Statistics Department, MOM'
+    Email: 'ng_mun_yi@mom.gov.sg'
+Sources:
+  - 'Ministry of Manpower'
+Source Url: 'http://stats.mom.gov.sg/Pages/Labour-Force-Summary-Table.aspx'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Annual'
+Coverage: '1991-01-01 to 2015-12-31'
+Last Updated: '2017-02-06T07:33:09.875784'
+Resources:
+  -
+    Identifier: '2547a94c-19d8-4f73-8c8f-80d744112ce3'
+    Title: 'Resident Labour Force Aged 15 Years and Over by Highest Qualification
+      Attained and Sex'
+    Url: 'https://storage.data.gov.sg/resident-labour-force-aged-15-years-and-over-by-highest-qualification-attained-and-sex/resources/resident-labour-force-aged-15-years-and-over-by-highest-qualification-attained-and-sex-2016-05-10T09-20-52Z.csv'
+    Format: 'CSV'
+    Coverage: '1991-01-01 to 2015-12-31'
+    Description:
+      - '* Data are for mid-year.'
+      - '* Residents refer to Singapore Citizens and Permanent Residents.'
+      - '* Resident labour force refers to residents aged 15 & over who were either
+        employed or unemployed during the reference period.'
+      - '* Data for 1995, 2000 and 2005 are not available as the Comprehensive Labour
+        Force Survey was not conducted in these years due to the conduct of the Population
+        Census 2000, General Household Surveys 1995 and 2005 by Department of Statistics,
+        Ministry of Trade and Industry.'
+      - ''
+      - 'Source: Comprehensive Labour Force Survey, Manpower Research And Statistics
+        Department, MOM'
+    Last Updated: '2016-05-10T09:20:52.074820'
+    Schema:
+      -
+        Name: 'year'
+        Title: 'Year'
+        Type: 'datetime'
+        Sub Type: 'year'
+        Format: 'YYYY'
+      -
+        Name: 'sex'
+        Title: 'Sex'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'highest_qualification'
+        Title: 'Highest Qualification Attained'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'labour_force'
+        Title: 'Labour Force'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'Number of Persons'

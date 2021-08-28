@@ -1,0 +1,56 @@
+# Metadata for Median Age of Brides by Ethnic Group, Annual
+---
+Identifier: '9b4272ab-485c-4abd-9803-f53217d22533'
+Name: 'median-age-of-brides-by-ethnic-group-annual'
+Title: 'Median Age of Brides by Ethnic Group, Annual'
+Description:
+  - 'Total marriages comprise civil marriages registered under the Women’s Charter
+    and Muslim marriages registered under the Administration of Muslim Law Act. They
+    are obtained from records maintained by the Registry of Marriages and the Registry
+    of Muslim Marriages.'
+  - ''
+  - 'Total may include marriages with attribute(s) not reported.'
+Topics:
+  - 'Society'
+Keywords:
+  - 'Bride'
+  - 'Marriage'
+Publisher:
+  Name: 'Ministry of Trade and Industry - Department of Statistics'
+  Admin 1:
+    Name: 'SingStat Info'
+    Department: 'Statistics Information Services'
+    Email: 'info@singstat.gov.sg'
+Sources:
+  - 'Ministry of Trade and Industry - Department of Statistics'
+Source Url: 'http://www.tablebuilder.singstat.gov.sg/publicfacing/createDataTable.action?refId=10112&exportType=csv'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Annual'
+Coverage: '1984-01-01 to 2020-12-31'
+Last Updated: '2021-07-09T03:34:22.267038'
+Resources:
+  -
+    Identifier: '4e4953bd-7b6c-4195-9724-2e44e57f431b'
+    Title: 'Median Age of Brides by Ethnic Group, Annual'
+    Url: 'https://storage.data.gov.sg/median-age-of-brides-by-ethnic-group-annual/resources/median-age-of-brides-by-ethnic-group-annual-2021-07-09T03-34-21Z.csv'
+    Format: 'CSV'
+    Coverage: '1984-01-01 to 2020-12-31'
+    Last Updated: '2021-07-09T03:34:21.806624'
+    Schema:
+      -
+        Name: 'year'
+        Title: 'Year'
+        Type: 'datetime'
+        Sub Type: 'year'
+        Format: 'YYYY'
+      -
+        Name: 'level_1'
+        Title: 'Ethnic Group'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'value'
+        Title: 'Median Age of Brides'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'No. of Years'

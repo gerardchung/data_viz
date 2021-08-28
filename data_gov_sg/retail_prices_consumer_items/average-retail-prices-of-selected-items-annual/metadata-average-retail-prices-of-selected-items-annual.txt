@@ -1,0 +1,62 @@
+# Metadata for Average Retail Prices Of Selected Consumer Items, Annual
+---
+Identifier: '723cd340-eeb3-4d35-a8a5-b786839b8ec4'
+Name: 'average-retail-prices-of-selected-items-annual'
+Title: 'Average Retail Prices Of Selected Consumer Items, Annual'
+Description:
+  - 'Average prices compiled are based on monthly retail prices of selected goods
+    and services collected from a wide range of retailers and service providers commonly
+    patronised by resident households.'
+  - ''
+  - 'Prices of items starting from January 2019 are based on the 2019-based CPI basket.
+    While they are indicative of the average transaction price levels in the same
+    base period, they are not a measure of pure price movements across CPI baskets
+    due to changes in the sample of brands/varieties and outlets priced.'
+Topics:
+  - 'Economy'
+Keywords:
+  - 'CPI'
+  - 'households'
+  - 'inflation'
+  - 'prices'
+  - 'retail prices'
+Publisher:
+  Name: 'Ministry of Trade and Industry - Department of Statistics'
+  Admin 1:
+    Name: 'SingStat Info'
+    Department: 'SIS'
+    Email: 'info@singstat.gov.sg'
+Sources:
+  - 'Ministry of Trade and Industry - Department of Statistics'
+Source Url: 'http://www.tablebuilder.singstat.gov.sg/publicfacing/createDataTable.action?refId=16857&exportType=csv'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Annual'
+Coverage: '2010-01-01 to 2020-12-31'
+Last Updated: '2021-08-26T16:50:07.914957'
+Resources:
+  -
+    Identifier: 'f39e525f-2448-4163-a96e-c08207e4b360'
+    Title: 'Average Retail Prices Of Selected Consumer Items, Annual'
+    Url: 'https://storage.data.gov.sg/average-retail-prices-of-selected-items-annual/resources/average-retail-prices-of-selected-consumer-items-annual-2021-08-26T16-50-07Z.csv'
+    Format: 'CSV'
+    Coverage: '2010-01-01 to 2020-12-31'
+    Last Updated: '2021-08-26T16:50:07.497044'
+    Schema:
+      -
+        Name: 'year'
+        Title: 'Year'
+        Type: 'datetime'
+        Sub Type: 'year'
+        Format: 'YYYY'
+      -
+        Name: 'level_1'
+        Title: 'Items'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'value'
+        Title: 'Average Price'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'S$'
+        Description: '"na" : Data not available or not applicable'

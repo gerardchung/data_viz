@@ -1,0 +1,104 @@
+# Metadata for Average Monthly Household Electricity Consumption by Dwelling Type
+---
+Identifier: '055d4573-5e9c-46de-8fd7-70bae764e304'
+Name: 'average-monthly-household-electricity-consumption-by-dwelling-type'
+Title: 'Average Monthly Household Electricity Consumption by Dwelling Type'
+Description: 'Shows average monthly household electricity consumption by dwelling
+  type (in kWh).'
+Topics:
+  - 'Environment'
+Keywords:
+  - 'Energy'
+Publisher:
+  Name: 'Energy Market Authority'
+  Admin 1:
+    Name: 'EMA RSU Enquiry'
+    Department: 'Research & Statistics Unit'
+    Email: 'RSU_Enquiry@ema.gov.sg'
+Sources:
+  - 'Energy Market Authority'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Monthly'
+Coverage: '2005-01-01 to 2020-07-31'
+Last Updated: '2020-12-21T09:20:52.084952'
+Resources:
+  -
+    Identifier: '4feb82a2-0d2e-4e8a-bc74-dd8c0c960af8'
+    Title: 'Average Monthly Household Electricity Consumption by Dwelling Type, 2005
+      to 2020'
+    Url: 'https://storage.data.gov.sg/average-monthly-household-electricity-consumption-by-dwelling-type/resources/average-monthly-household-electricity-consumption-by-dwelling-type-2005-to-2020-2020-12-21T09-20-51Z.csv'
+    Format: 'CSV'
+    Coverage: '2005-01-01 to 2020-07-31'
+    Description:
+      - 'Note:'
+      - 'a. Solar PV statistics are not included for 2020 numbers.'
+      - 'b. Numbers may not add up to the totals due to rounding.'
+      - 'c. Solar PV statistics have been included in this table from 2016.'
+    Last Updated: '2020-12-21T09:20:51.596188'
+    Schema:
+      -
+        Name: 'month'
+        Title: 'Month'
+        Type: 'datetime'
+        Sub Type: 'month'
+        Format: 'YYYY-MM'
+      -
+        Name: 'overall'
+        Title: 'Overall'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'kWh'
+      -
+        Name: 'public_housing'
+        Title: 'Public housing'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'kWh'
+      -
+        Name: '1-room_2-room'
+        Title: '1-room 2-room'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'kWh'
+      -
+        Name: '3-room'
+        Title: '3-room'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'kWh'
+      -
+        Name: '4-room'
+        Title: '4-room'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'kWh'
+      -
+        Name: '5-room_and_executive'
+        Title: '5-room and executive'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'kWh'
+      -
+        Name: 'private_housing'
+        Title: 'Private housing'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'kWh'
+      -
+        Name: 'private_apts_and_condo'
+        Title: 'Private apts and condo'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'kWh'
+      -
+        Name: 'landed_properties'
+        Title: 'Landed properties'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'kWh'
+      -
+        Name: 'others'
+        Title: 'Others'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'kWh'

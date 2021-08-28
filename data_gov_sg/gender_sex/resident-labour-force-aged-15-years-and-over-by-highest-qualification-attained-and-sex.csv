@@ -1,0 +1,265 @@
+year,sex,highest_qualification,labour_force
+1991,males,primary and below,281200
+1991,males,lower secondary,158800
+1991,males,secondary,224400
+1991,males,post-secondary (non-tertiary),76000
+1991,males,diploma and professional qualification,58300
+1991,males,degree,57400
+1991,females,primary and below,143900
+1991,females,lower secondary,53300
+1991,females,secondary,195900
+1991,females,post-secondary (non-tertiary),61100
+1991,females,diploma and professional qualification,27600
+1991,females,degree,35100
+1992,males,primary and below,273300
+1992,males,lower secondary,158300
+1992,males,secondary,223400
+1992,males,post-secondary (non-tertiary),80900
+1992,males,diploma and professional qualification,67000
+1992,males,degree,68900
+1992,females,primary and below,143900
+1992,females,lower secondary,55400
+1992,females,secondary,200500
+1992,females,post-secondary (non-tertiary),62600
+1992,females,diploma and professional qualification,35300
+1992,females,degree,40300
+1993,males,primary and below,269700
+1993,males,lower secondary,155600
+1993,males,secondary,228500
+1993,males,post-secondary (non-tertiary),81200
+1993,males,diploma and professional qualification,70900
+1993,males,degree,77500
+1993,females,primary and below,136600
+1993,females,lower secondary,59300
+1993,females,secondary,195200
+1993,females,post-secondary (non-tertiary),62200
+1993,females,diploma and professional qualification,36800
+1993,females,degree,48200
+1994,males,primary and below,261500
+1994,males,lower secondary,159000
+1994,males,secondary,233400
+1994,males,post-secondary (non-tertiary),83900
+1994,males,diploma and professional qualification,77000
+1994,males,degree,83500
+1994,females,primary and below,135400
+1994,females,lower secondary,61500
+1994,females,secondary,201700
+1994,females,post-secondary (non-tertiary),61600
+1994,females,diploma and professional qualification,44200
+1994,females,degree,53400
+1996,males,primary and below,243400
+1996,males,lower secondary,150500
+1996,males,secondary,247200
+1996,males,post-secondary (non-tertiary),81500
+1996,males,diploma and professional qualification,91400
+1996,males,degree,102700
+1996,females,primary and below,130200
+1996,females,lower secondary,62300
+1996,females,secondary,211400
+1996,females,post-secondary (non-tertiary),60200
+1996,females,diploma and professional qualification,59500
+1996,females,degree,71200
+1997,males,primary and below,226300
+1997,males,lower secondary,168400
+1997,males,secondary,242100
+1997,males,post-secondary (non-tertiary),76300
+1997,males,diploma and professional qualification,103200
+1997,males,degree,119200
+1997,females,primary and below,123900
+1997,females,lower secondary,74800
+1997,females,secondary,204700
+1997,females,post-secondary (non-tertiary),60800
+1997,females,diploma and professional qualification,63200
+1997,females,degree,75300
+1998,males,primary and below,214500
+1998,males,lower secondary,158300
+1998,males,secondary,243400
+1998,males,post-secondary (non-tertiary),74400
+1998,males,diploma and professional qualification,110800
+1998,males,degree,130300
+1998,females,primary and below,117700
+1998,females,lower secondary,70000
+1998,females,secondary,208800
+1998,females,post-secondary (non-tertiary),60600
+1998,females,diploma and professional qualification,71500
+1998,females,degree,86200
+1999,males,primary and below,213600
+1999,males,lower secondary,166200
+1999,males,secondary,243300
+1999,males,post-secondary (non-tertiary),78500
+1999,males,diploma and professional qualification,113300
+1999,males,degree,141500
+1999,females,primary and below,119000
+1999,females,lower secondary,74600
+1999,females,secondary,212200
+1999,females,post-secondary (non-tertiary),60100
+1999,females,diploma and professional qualification,82100
+1999,females,degree,91500
+2001,males,primary and below,195100
+2001,males,lower secondary,153300
+2001,males,secondary,245700
+2001,males,post-secondary (non-tertiary),90400
+2001,males,diploma and professional qualification,125300
+2001,males,degree,164400
+2001,females,primary and below,114900
+2001,females,lower secondary,75600
+2001,females,secondary,211000
+2001,females,post-secondary (non-tertiary),58400
+2001,females,diploma and professional qualification,95800
+2001,females,degree,114400
+2002,males,primary and below,189400
+2002,males,lower secondary,157400
+2002,males,secondary,247200
+2002,males,post-secondary (non-tertiary),91500
+2002,males,diploma and professional qualification,128200
+2002,males,degree,179300
+2002,females,primary and below,108600
+2002,females,lower secondary,74000
+2002,females,secondary,208400
+2002,females,post-secondary (non-tertiary),60000
+2002,females,diploma and professional qualification,94600
+2002,females,degree,129400
+2003,males,primary and below,186000
+2003,males,lower secondary,156000
+2003,males,secondary,235800
+2003,males,post-secondary (non-tertiary),90100
+2003,males,diploma and professional qualification,134000
+2003,males,degree,204400
+2003,females,primary and below,106900
+2003,females,lower secondary,74100
+2003,females,secondary,205500
+2003,females,post-secondary (non-tertiary),61800
+2003,females,diploma and professional qualification,107500
+2003,females,degree,144300
+2004,males,primary and below,175200
+2004,males,lower secondary,156600
+2004,males,secondary,234600
+2004,males,post-secondary (non-tertiary),92800
+2004,males,diploma and professional qualification,142100
+2004,males,degree,216100
+2004,females,primary and below,105600
+2004,females,lower secondary,80300
+2004,females,secondary,196100
+2004,females,post-secondary (non-tertiary),60600
+2004,females,diploma and professional qualification,115700
+2004,females,degree,157500
+2006,males,primary and below,178000
+2006,males,lower secondary,153500
+2006,males,secondary,242800
+2006,males,post-secondary (non-tertiary),96100
+2006,males,diploma and professional qualification,159500
+2006,males,degree,251300
+2006,females,primary and below,117700
+2006,females,lower secondary,83200
+2006,females,secondary,213400
+2006,females,post-secondary (non-tertiary),66600
+2006,females,diploma and professional qualification,129500
+2006,females,degree,189400
+2007,males,primary and below,174800
+2007,males,lower secondary,159500
+2007,males,secondary,240100
+2007,males,post-secondary (non-tertiary),100600
+2007,males,diploma and professional qualification,167900
+2007,males,degree,257100
+2007,females,primary and below,113600
+2007,females,lower secondary,83300
+2007,females,secondary,217800
+2007,females,post-secondary (non-tertiary),67400
+2007,females,diploma and professional qualification,139100
+2007,females,degree,196900
+2008,males,primary and below,156100
+2008,males,lower secondary,131100
+2008,males,secondary,236200
+2008,males,post-secondary (non-tertiary),116500
+2008,males,diploma and professional qualification,176000
+2008,males,degree,277300
+2008,females,primary and below,105900
+2008,females,lower secondary,73900
+2008,females,secondary,216600
+2008,females,post-secondary (non-tertiary),69500
+2008,females,diploma and professional qualification,148000
+2008,females,degree,221200
+2009,males,primary and below,161700
+2009,males,lower secondary,131800
+2009,males,secondary,260000
+2009,males,post-secondary (non-tertiary),92100
+2009,males,diploma and professional qualification,187000
+2009,males,degree,294300
+2009,females,primary and below,110700
+2009,females,lower secondary,77700
+2009,females,secondary,222200
+2009,females,post-secondary (non-tertiary),62500
+2009,females,diploma and professional qualification,149200
+2009,females,degree,236600
+2010,males,primary and below,153600
+2010,males,lower secondary,117000
+2010,males,secondary,212700
+2010,males,post-secondary (non-tertiary),154000
+2010,males,diploma and professional qualification,202600
+2010,males,degree,311700
+2010,females,primary and below,113400
+2010,females,lower secondary,71400
+2010,females,secondary,197600
+2010,females,post-secondary (non-tertiary),92000
+2010,females,diploma and professional qualification,167700
+2010,females,degree,253600
+2011,males,primary and below,151600
+2011,males,lower secondary,112900
+2011,males,secondary,216500
+2011,males,post-secondary (non-tertiary),153200
+2011,males,diploma and professional qualification,209300
+2011,males,degree,316900
+2011,females,primary and below,110200
+2011,females,lower secondary,72000
+2011,females,secondary,203700
+2011,females,post-secondary (non-tertiary),92000
+2011,females,diploma and professional qualification,169600
+2011,females,degree,272200
+2012,males,primary and below,150300
+2012,males,lower secondary,108400
+2012,males,secondary,209400
+2012,males,post-secondary (non-tertiary),156200
+2012,males,diploma and professional qualification,215900
+2012,males,degree,337400
+2012,females,primary and below,109400
+2012,females,lower secondary,70600
+2012,females,secondary,198500
+2012,females,post-secondary (non-tertiary),97800
+2012,females,diploma and professional qualification,180800
+2012,females,degree,284900
+2013,males,primary and below,143000
+2013,males,lower secondary,105700
+2013,males,secondary,204700
+2013,males,post-secondary (non-tertiary),154000
+2013,males,diploma and professional qualification,213800
+2013,males,degree,362000
+2013,females,primary and below,108300
+2013,females,lower secondary,66000
+2013,females,secondary,195900
+2013,females,post-secondary (non-tertiary),93700
+2013,females,diploma and professional qualification,180200
+2013,females,degree,311600
+2014,males,primary and below,143100
+2014,males,lower secondary,101500
+2014,males,secondary,197700
+2014,males,post-secondary (non-tertiary),153800
+2014,males,diploma and professional qualification,230500
+2014,males,degree,375900
+2014,females,primary and below,107700
+2014,females,lower secondary,67400
+2014,females,secondary,192400
+2014,females,post-secondary (non-tertiary),96500
+2014,females,diploma and professional qualification,195600
+2014,females,degree,323000
+2015,males,primary and below,140900
+2015,males,lower secondary,95000
+2015,males,secondary,205300
+2015,males,post-secondary (non-tertiary),163200
+2015,males,diploma and professional qualification,230900
+2015,males,degree,380800
+2015,females,primary and below,109700
+2015,females,lower secondary,61600
+2015,females,secondary,201500
+2015,females,post-secondary (non-tertiary),104500
+2015,females,diploma and professional qualification,200200
+2015,females,degree,338700

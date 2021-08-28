@@ -1,0 +1,63 @@
+# Metadata for Causes of Road Accidents - Causes of Accidents by Severity of Injury Sustained
+---
+Identifier: 'cc6b13f2-b51d-4e6d-b6dc-d6709fa6a85b'
+Name: 'causes-of-road-accidents-causes-of-accidents-by-severity-of-injury-sustained'
+Title: 'Causes of Road Accidents - Causes of Accidents by Severity of Injury Sustained'
+Description: 'This Dataset shows whether the accident was Fatal, who was involved,
+  and briefly how the accident was caused.'
+Topics:
+  - 'Transport'
+Keywords:
+  - 'Accident'
+  - 'Cause'
+  - 'Fatal'
+  - 'Injury'
+  - 'Road'
+Publisher:
+  Name: 'Ministry of Home Affairs - Singapore Police Force'
+  Admin 1:
+    Name: 'Ng Pei Lin'
+    Department: 'Traffic Police Department'
+    Email: 'ng_pei_lin@spf.gov.sg'
+Sources:
+  - 'Ministry of Home Affairs - Singapore Police Force'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Annual'
+Coverage: '2012-01-01 to 2018-12-31'
+Last Updated: '2019-10-24T06:27:08.904632'
+Resources:
+  -
+    Identifier: 'd68321b6-c438-425d-b9f4-d5777eee9e77'
+    Title: 'Causes of Accidents by Severity of Injury Sustained'
+    Url: 'https://storage.data.gov.sg/causes-of-road-accidents-causes-of-accidents-by-severity-of-injury-sustained/resources/causes-of-accidents-by-severity-of-injury-sustained-2019-06-03T14-22-01Z.csv'
+    Format: 'CSV'
+    Coverage: '2012-01-01 to 2018-12-31'
+    Description: 'Note:  One accident may have multiple causes.'
+    Last Updated: '2019-06-03T14:22:01.222680'
+    Schema:
+      -
+        Name: 'year'
+        Title: 'Year'
+        Type: 'datetime'
+        Sub Type: 'year'
+        Format: 'YYYY'
+      -
+        Name: 'accident_classification'
+        Title: 'Accident classification'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'road_user_group'
+        Title: 'Road user group'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'causes_of_accident'
+        Title: 'Causes of accident'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'number_of_accidents'
+        Title: 'Number of accidents'
+        Type: 'text'
+        Sub Type: 'general'
