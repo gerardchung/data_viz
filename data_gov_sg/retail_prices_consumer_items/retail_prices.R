@@ -87,58 +87,19 @@ data_wide <-
 
 p <- ggplot(data, aes(x = year, y = value, group = food))
 
-p + geom_smooth(method = "lm", se = F)
-
-p <- ggplot(data, aes(x = year, y = value))
-
 p + geom_smooth(method = "loess", se = F) + 
     facet_wrap(vars(food)) + geom_point()
     #facet_grid()
 
-p <- ggplot(data_wide, aes(x = food, y = pct))
 
 ## colors =====
 red <- "#ee2536" # singapore flag color https://colorswall.com/palette/18520/ 
 white <- "#ffffff"
 
 
-p + 
-geom_col(show.legend = FALSE) +
-    # facet_wrap(~id, scales = "free_y") + 
-   # facet_wrap(~id) + 
-    #  geom_text(
-  #  geom_text(data = sentiment_focus %>% filter(id == "Home (1998)"),
-  #            aes(label = paste(sentiment)),
-  #            vjust = +2, 
-  #            #nudge_x = -0.2,
-  #            fontface = "bold",
-  #            family = "Roboto Condensed",
-  #            size = 5) + 
-    scale_fill_manual(values = c("#459DE0", red, "orange")) + 
-    theme_minimal(base_family = "Roboto Condensed") +
-    labs(title = "COMPARING POSITIVE FEELINGS ACROSS THREE NDP SONGS",
-         subtitle = "Proportion of feelings anticipation, joy, & trust",
-         caption = "gerardchung.com | Codes: https://github.com/gerardchung/ndp2021") +
-    theme(rect = element_rect(fill = "#ffffff"),
-          panel.background = element_rect(fill = "#ffffff", color = "#ffffff"),
-          plot.background = element_rect(fill = "#ffffff", color = "#ffffff"),
-          # axis.text.y = element_text(size = 15, hjust = 1, family = "Roboto Condensed", color = "black"),
-          axis.text.y = element_blank(),
-          axis.text.x = element_blank(),
-          axis.title = element_blank(),
-          axis.ticks = element_blank(),
-          panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank(),
-          plot.title = ggtext::element_markdown(size = 32, face="bold"),
-          plot.subtitle = ggtext::element_markdown(size = 28, face="bold"),
-          plot.caption  = element_text(size = 10, hjust = 1, family = "Roboto Condensed", color = "#595959"),
-          legend.position = "none",
-          strip.text.x = element_text(
-              size = 15, face = "bold.italic", family = "Roboto Condensed"
-          ))
 
 
-# Slope graphs 
+## Slope graphs ====
 p <- ggplot(data, aes(x = year, y = value, group = food))
 p + 
   geom_line(aes(color = food), size = 1, alpha = 1) +
@@ -146,13 +107,13 @@ p +
 #  scale_fill_manual(values = c("#459DE0", red, "orange")) + 
   theme_minimal(base_family = "Roboto Condensed") +
   labs(title = "Prices of common hawker food",
-       subtitle = "Average from 2014 to 2020",
-       caption = "gerardchung.com | Codes: https://github.com/gerardchung/ndp2021") +
+       subtitle = "Annual average from 2014 to 2020",
+       caption = "Data: data.gov.sg | gerardchung.com | Codes: https://github.com/gerardchung/data_viz/tree/main/data_gov_sg/retail_prices_consumer_items") +
   theme(rect = element_rect(fill = "#ffffff"),
         panel.background = element_rect(fill = "#ffffff", color = "#ffffff"),
         plot.background = element_rect(fill = "#ffffff", color = "#ffffff"),
-        axis.text.y = element_text(size = 15, hjust = .1, family = "Roboto Condensed", color = "black"),
-       # axis.text.y = element_blank(),
+        # axis.text.y = element_text(size = 15, hjust = .1, family = "Roboto Condensed", color = "black"),
+        axis.text.y = element_blank(),
        # axis.text.y = element_text(size = 20, family = "Roboto Condensed", color = "black"),
         axis.text.x = element_blank(),
         axis.title = element_blank(),
@@ -168,55 +129,101 @@ p +
         )) +
   scale_y_continuous(labels = scales::dollar_format()) +
   ggrepel::geom_text_repel(data = data %>% filter(year == "2020"),
-                           aes(label = paste(value)),
-                           hjust = .3, #hjust = -1.3, 
-                           nudge_x = +.2,
+                           aes(label = paste0("$",value)),
+                           hjust = .9, #hjust = -1.3, 
+                           nudge_x = +.4,
                            #fontface = "bold",
                            family = "Roboto Condensed",
-                           size = 4)
+                           size = 4) + 
+  ggrepel::geom_text_repel(data = data %>% filter(year == "2014"),
+                           aes(label = paste0("$",value)),
+                           hjust = -.8, vjust = -0.8, 
+                          # nudge_x = -.2,
+                           #fontface = "bold",
+                           family = "Roboto Condensed",
+                           size = 4) -> plot_final1
+
+ggsave("data_gov_sg/retail_prices_consumer_items/plots/foodprices_slop.png", plot = plot_final1, type = 'cairo', width = 14, height = 8.5, dpi = 400, units = "in", bg = white)
 
 
   
+
+## Column charts =====
+
+## remove parentheses 
+unique(data_wide$food)
+data_wide$food1 <-gsub("\\([^()]*\\)", "", data_wide$food) # remove anything between paentheses
+
+## make highlight columns
+unique(data_wide$food1)
+data_wide <-
+  data_wide %>% 
+  mutate(highlight_key = ifelse( (food1 %in% 'Chicken Nasi Briyani ') | (food1 %in% 'Roti Prata  '), T, F))
+
+
+p <- ggplot(data_wide, aes(x = change, y = reorder(food1, change)))
+
+p + 
+  geom_col(aes(fill = highlight_key),
+           show.legend = FALSE, alpha = 1) +
   
-    geom_text(data = data %>% filter(year == "2020"),
-            aes(label = paste(value)),
-            vjust = +2, 
-            nudge_x = 0.,
+  geom_text(data = data_wide,
+            aes(label = paste0("+$", sprintf("%0.02f", change))),
+           # vjust = -1,  
+            vjust = +1.5, hjust = +1.3, 
+            #nudge_x = -0.5,
+            #nudge_x = -0.2,
+            fontface = "bold", 
+            family = "Roboto Condensed",
+            size = 7 ) + 
+  
+  geom_text(data = data_wide,
+            aes(label = paste0("+",sprintf("%0.f", pct),"%")),
+            vjust = 2.5, hjust = -.1, 
+            #nudge_x = -0.2,
           #  fontface = "bold",
             family = "Roboto Condensed",
-            size = 5) +
+            size = 3) + 
+              
+  scale_fill_manual(values = c("#459DE0", red, "orange")) + 
+  theme_minimal(base_family = "Roboto Condensed") +
+  labs(title = "INCREASE IN HAWKER FOOD PRICES",
+       subtitle = "FROM 2014 TO 2020",
+       caption = "gerardchung.com | Codes: https://github.com/gerardchung/data_viz/tree/main/data_gov_sg/retail_prices_consumer_items") +
+  theme(rect = element_rect(fill = "#ffffff"),
+        panel.background = element_rect(fill = "#ffffff", color = "#ffffff"),
+        plot.background = element_rect(fill = "#ffffff", color = "#ffffff"),
+        axis.text.y = element_text(size = 15, hjust = 1, family = "Roboto Condensed", color = "black"),
+       # axis.text.y = element_blank(),
+        axis.text.x = element_blank(),
+        axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        plot.title = ggtext::element_markdown(size = 32, face="bold"),
+        plot.subtitle = ggtext::element_markdown(size = 28, face="bold"),
+        plot.caption  = element_text(size = 10, hjust = 1, family = "Roboto Condensed", color = "#595959"),
+        legend.position = "none",
+        strip.text.x = element_text(
+          size = 15, face = "bold.italic", family = "Roboto Condensed"
+        )) -> plot_finalA1
 
 
-  
+## https://statisticsglobe.com/add-image-to-plot-in-r 
+## https://patchwork.data-imaginist.com/reference/plot_layout.html
+  # insert picture 
+#install.packages("png")             # Install png package
+library("png")  
+
+my_image <- readPNG("data_gov_sg/retail_prices_consumer_items/plots/prata1.png", native = TRUE)
+
+#install.packages("patchwork")       # Install patchwork package
+library("patchwork")
+#ggp_image <- 
+bar_graph <- plot_finalA1 + my_image + plot_layout(ncol = 2) 
 
 
-  ggrepel::geom_text_repel(data = data %>% filter(year == "2014"),
-                           aes(label = paste(value)),
-                           vjust = -0.8, hjust = -1.3, 
-                           #nudge_x = +0.9,
-                           fontface = "bold",
-                           family = "Roboto Condensed",
-                           size = 4)
 
-  
-  
-  
-  ggrepel::geom_text_repel(data = data %>% filter(year == "2014"),
-            aes(label = paste(value)),
-            vjust = -0.8, hjust = -1.3, 
-            #nudge_x = +0.9,
-            fontface = "bold",
-            family = "Roboto Condensed",
-            size = 4)
-  
-ggrepel::geom_text_repel(data = sentiment_wrdcount_bysong %>% filter(id == "9"),
-                         aes(label = paste("Home (1998)")),
-                         vjust = +2, 
-                         direction = "y",
-                         min.segment.length = 0,
-                         family = "Roboto Condensed",
-                         size = 4) + 
-  
-
+ggsave("data_gov_sg/retail_prices_consumer_items/plots/foodprices.png", plot = bar_graph, type = 'cairo', width = 14, height = 8.5, dpi = 400, units = "in", bg = white)
 
 
