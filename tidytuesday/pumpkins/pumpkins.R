@@ -110,7 +110,7 @@ ggplot(data = pumpkins %>%
          subtitle = "<br>",
          x = "",
          y = "Kilograms",
-         caption = "<b>GERARDCHUNG.COM</b> | <b>Data:</b> BigPumpkins.com | <b>Credits:</b> Jenn Schilling") +
+         caption = "<b>GERARDCHUNG.COM </b>  | <b>Data:</b> BigPumpkins.com | <b>Credits:</b> Jenn Schilling") +
     theme(
           axis.ticks.x = element_blank(),
           panel.grid.minor = element_blank(),
